@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var musica = document.getElementById('audio');
     var volumeSlider = document.getElementById('volumeSlider');
 
-    musica.play();
-
     musica.volume = 0.25;
     volumeSlider.value = 0.5;
 
