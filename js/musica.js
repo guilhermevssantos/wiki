@@ -1,0 +1,33 @@
+document.addEventListener('DOMContentLoaded', function () {
+    var musica = document.getElementById('audio');
+    var volumeSlider = document.getElementById('volumeSlider');
+
+    musica.play();
+
+    musica.volume = 0.25;
+    volumeSlider.value = 0.5;
+
+    function updateVolume() {
+        musica.volume = volumeSlider.value;
+    }
+
+    volumeSlider.addEventListener('input', updateVolume);
+
+    musica.addEventListener('ended', function () {
+        this.currentTime = 0;
+        this.play();
+    })
+
+    window.playMusica = function () {
+        musica.play();
+    }
+
+    window.pauseMusica = function () {
+        musica.pause();
+    }
+
+    window.stopMusica = function () {
+        musica.pause();
+        musica.currentTime = 0;
+    }
+});

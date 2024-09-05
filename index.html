@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/img/icon.png">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <title>God of War Wiki</title>
+</head>
+
+<body>
+    <div class="player">
+        <audio id="audio" autoplay>
+            <source src="./assets/music/theme.mp3" type="audio/mp3">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+    </div>
+
+    <div class="controles-musica">
+        <button class="player-btn" onclick="playMusica()">Play</button>
+        <button class="player-btn" onclick="pauseMusica()">Pausar</button>
+        <button class="player-btn" onclick="stopMusica()">Parar</button>
+        <input class="volume-slider" type="range" min="0" max="1" step="0.1" value="0.5" id="volumeSlider">
+    </div>
+
+    <div>
+        <video autoplay muted loop id="video-background" poster="./assets/img/background.png">
+            <source src="./assets/img/background.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+
+    <main>
+
+        <section class="cabecalho">
+            <img class="logo" src="./assets/img/logo.png" alt="Logo God of War">
+        </section>
+
+        <section>
+            <input type="text" name="busca" id="campo-busca" placeholder="Digite o nome de um personagem" required>
+            <button type="button">Pesquisar</button>
+        </section>
+
+        <section class="resultados-pesquisa">
+            <div class="item-resultado">
+                <h2 class="nome-personagem">
+                    <a href="https://pt.wikipedia.org/wiki/Kratos_(God_of_War)" target="_blank">Kratos</a>
+                </h2>
+                <p class="titulo">Deus da Guerra</p>
+                <p class="descricao-meta">O Fantasma de Esparta, também ex-general espartano matou sua família após ser
+                    enganado por Ares. Vingou-se do deus, tornando-se o novo deus da guerra. Buscando vingança contra
+                    todos os deuses do Olimpo, Kratos se torna o protagonista da série.</p>
+                <a href="https://pt.wikipedia.org/wiki/Kratos_(God_of_War)" target="_blank">Saiba mais</a>
+            </div>
+
+            <div class="item-resultado">
+                <h2 class="nome-personagem">
+                    <a href="https://pt.wikipedia.org/wiki/Atena" target="_blank">Atena</a>
+                </h2>
+                <p class="titulo">Deusa da Sabedoria e da Guerra</p>
+                <p class="descricao-meta">Ex-general espartano que, enganado por Ares, matou sua família. Vingou-se do
+                    deus, tornando-se o novo deus da guerra. Buscando vingança contra os deuses, Kratos se torna o
+                    protagonista da série.</p>
+                <a href="https://pt.wikipedia.org/wiki/Atena" target="_blank">Saiba mais</a>
+            </div>
+
+            <div class="item-resultado">
+                <h2 class="nome-personagem">
+                    <a href="https://pt.wikipedia.org/wiki/Zeus" target="_blank">Zeus</a>
+                </h2>
+                <p class="titulo">Rei dos deuses do Olimpo</p>
+                <p class="descricao-meta">O poderoso líder do Olimpo, Zeus é o pai de muitos deuses e heróis. Representa
+                    o poder absoluto e a corrupção que podem surgir quando este é mal utilizado. Manipulador e
+                    ambicioso, ele utiliza Kratos para seus próprios fins, mas acaba traindo seu filho levando o
+                    espartano a buscar vingança.</p>
+                <a href="https://pt.wikipedia.org/wiki/Zeus" target="_blank">Saiba mais</a>
+            </div>
+
+
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>2024 - God of War Wiki. Todos os direitos reservados.</p>
+        <p>Desenvolvido por: <a href="https://github.com/guilhermevssantos">Guilherme Vinícius Silva Santos</a></p>
+    </footer>
+
+    <script src="./js/musica.js"></script>
+    <script src="./js/dados.js"></script>
+    <script src="./js/app.js"></script>
+
+
+</body>
+
+</html>
